@@ -1,0 +1,50 @@
+JUEGO DE OCHO LOCO WEB DISTRIBUIDO
+=============================
+
+Esta es una aplicación web de Node que implementa el juego de ocho loco.
+Permite que 3 jugadores jueguen simultáneamente.
+
+
+Para poder ejecutarse se requiere tener instalado el siguiente software:
+
+- Node 0.8.*
+- MongoDB 2.*.*
+
+1. INSTALACIÓN
+==============
+La aplicación requiere instalar varios módulos de Node. Teclea el siguiente
+comando desde la terminal dentro del directorio 'juego':
+
+      sudo npm install
+
+MongoDB debe estar corriendo en su configuración por omisión (localhost:27017).
+No es necesario crear explícitamente la base de datos ni las colecciones.
+
+2. CORRIENDO EL SERVIDOR
+========================
+Teclea en la terminal dentro del directorio 'juego' el siguiente comando:
+
+      node app.js
+
+3. CORRIENDO EL CLIENTE DE TEXTO
+================================
+En la terminal dentro del directorio 'juego', teclea lo siguiente:
+
+      node cliente-texto-ocho-loco.js localhost 3000
+
+4. CORRIENDO EL CLIENTE WEB
+===========================
+En un navegador, ir al URL: http://localhost:3000/ocho_loco/
+Si se desea jugar en la misma computadora, se requerirán al menos dos
+navegadores distintos (por ejemplo Firefox y Chromium). No se pueden usar dos
+ventanas del mismo navegador debido a que comparten la misma sesión.
+
+En los puntos 3 y 4 el nombre de dominio 'localhost' puede ser sustituido por
+la dirección IP de la máquina que funciona como servidor. Se puede usar el
+comando 'ifconfig' para obtener dicha dirección. Pueden combinarse clientes web y clientes de modo texto.
+
+AUTORES
+===========================
+CARLOS ANDRES SANCHEZ HERNANDEZ A00396076
+LUIS IVAN CAMPOS SORIANO A01167949
+MOISES PAVEL OLMEDO PINA

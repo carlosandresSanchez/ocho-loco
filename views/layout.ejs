@@ -1,0 +1,43 @@
+<%
+/*******************************************************************************
+ * Juego de Gato distribuido
+ * Plantilla base para todas las páginas web.
+ * Copyright (C) 2013 por Ariel Ortiz
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ ******************************************************************************/
+%>
+
+<!DOCTYPE html>
+
+<html lang="es">
+
+  <head>
+    <meta charset="utf-8" />
+    <title><%= titulo %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="/javascripts/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="jquery.ui.touch-punch.min.js"></script>
+    <script src="/javascripts/cliente-web-ocholoco.js"></script>
+  </head>
+
+  <body>
+    <%- body %>
+    <footer>
+      © 2013 por Carlos Andres Sanchez, Moises Olmedo, Luis Ivan Campos; ITESM CEM.
+    </footer>
+
+  </body>
+  
+</html>

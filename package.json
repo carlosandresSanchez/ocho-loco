@@ -1,0 +1,14 @@
+{
+  "name": "ocho loco",
+  "version": "0.0.1",
+  "description": "Juego de Ocho loco distribuido",
+  "autor": "© 2013 por Luis Ivan Campos, Carlos Andres Sanchez, Moises Olmedo; ITESM CEM.",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.2.0",
+    "ejs": "*"
+  }
+}

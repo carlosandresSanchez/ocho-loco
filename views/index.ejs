@@ -1,0 +1,253 @@
+<%
+/*******************************************************************************
+ * Juego de Gato distribuido
+ * Aplicación de página única (SPA: Single-Page Application).
+ * Copyright (C) 2013 por Ariel Ortiz
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ ******************************************************************************/
+%>
+    
+    <!------------------------------------------------------------------------->
+    <!---<img src="/images/ocho_loco.jpg" alt="" width="150" height="150"/>---->
+    <h1>
+      <img src="/images/cartas.png" alt="" width="100" height="100"/> OCHO LOCO 
+    </h1>    
+    
+
+    <!------------------------------------------------------------------------->
+    <div id="seccion_menu" rotate(44.1176deg)>
+      <h2>
+        Menú principal
+      </h2>
+      
+      <p>
+        <button id="boton_crear_juego">
+          Crear un nuevo juego
+        </button>
+        <button id="boton_unir_juego">
+          Unirse a un juego existente
+        </button>
+      </p>
+    </div>
+
+    <!------------------------------------------------------------------------->
+    <div id="seccion_solicitar_nombres" class="invisible">
+      <form id="form_creacion_del_juego">
+        <p>
+          <label for="nombre_del_juego">
+            Indica el nombre del juego:
+          </label>
+        </p>
+        <input id="nombre_del_juego" type="text" size="20"/>
+        <p>
+          <label for="nombre_del_creador">
+            Indica el nombre de jugador:
+          </label>
+        </p>
+        <input id="nombre_del_creador" type="text" size="20"/>
+        <p>
+          <button id="boton_continuar_crear_juego">
+            Continuar
+          </button>
+          <button class="regresar_al_menu">
+            Cancelar
+          </button>
+        </p>
+      </form>
+    </div>
+
+    <!------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------->
+    <div id="seccion_sin_juegos" class="invisible">
+      <p>
+        No hay juegos disponibles.
+      </p>
+      <button class="regresar_al_menu">
+        Menú principal
+      </button>
+    </div>
+    
+    <!------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------->
+    <div id="seccion_juego_jugador" class="invisible">
+      
+      <h2 id="nombre_juego_jugador">
+
+      </h2>
+      
+      <h2 id="h2_oponentes">
+        
+      </h2>
+      
+      <p id="oponentes">
+        
+      </p>
+      
+    </div>
+    
+    <!------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------->
+    <div id="seccion_pasar" class="invisible">
+      <p>
+        <button id="boton_pasar_turno">
+            Pasar turno
+        </button>
+      </p>
+     </div>
+    <!------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------->
+    <div id="seccion_mensajes" class="invisible">
+      <p id="mensaje_1">
+      </p>
+      
+      <p id="mensaje_3">
+      </p>
+    </div>
+    
+    <!------------------------------------------------------------------------->
+    <div id="seccion_jugador" class="invisible">
+      
+      <h3>
+        Tus cartas son:
+      </h3>
+      
+      <p id="tus_cartas">
+      </p>
+      
+    </div>
+    <!------------------------------------------------------------------------->
+    <div id="seccion_juego" class="invisible">
+      <h2>
+        Pila
+      </h2>
+      
+      <p id="mensaje_pila">
+      </p>
+      
+      <p id="pila">
+      </p>
+      
+      <h2>
+        Baraja
+        <img id="img_baraja" src="/images/baraja.jpg" alt="" width="150" height="150"/>
+      </h2>
+      
+      <p id="mensaje_baraja">
+      </p>
+      
+    </div>
+    
+    <!------------------------------------------------------------------------->
+    
+    <div id="seccion_ocho_loco" class="invisible">
+      <p>
+        Has hecho un OCHO LOCO
+      </p>
+      <form id="form_ocho_loco">
+          <label for="lista_palos">
+            ¿Cual sera el palo de la siguiente carta?
+          </label>
+          <select id="lista_palos">
+            <option value="PICA">PICA</option>
+            <option value="DIAMANTE">DIAMANTE</option>
+            <option value="CORAZON">CORAZON</option>
+            <option value="TREBOL">TREBOL</option>
+          </select>
+        </p>
+        <p>
+          <button id="boton_enviar_ocho_loco">
+            Enviar
+          </button>
+        </p>
+      </form>
+      
+    </div>
+    
+    <!------------------------------------------------------------------------->    
+    <!------------------------------------------------------------------------->
+    <div id="seccion_error" class="invisible">
+      <p>
+        <span class="resalta">
+          <strong>
+            Error:
+          </strong>
+          <span id="mensaje_error">
+          </span>
+        </span>
+      </p>
+      <button class="regresar_al_menu">
+        Menú principal
+      </button>
+    </div>
+
+    <!------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------->
+    <div id="seccion_unir_juegos" class="invisible">
+      <form id="form_lista_juegos">
+        <p>
+          <label for="unir_nombre_jugador" >
+            Indica tu nombre de jugador
+          </label>
+          <input id="unir_nombre_jugador" type="text" size="20"/>
+        </p>
+        <p>
+          <label for="lista_juego">
+            ¿A qué juego deseas unirte?
+          </label>
+          <select id="lista_juego" name="nombre">
+          </select>
+        </p>
+        <p>
+          <button id="boton_continuar_unir_juego">
+            Continuar
+          </button>
+          <button class="regresar_al_menu">
+            Cancelar
+          </button>
+        </p>
+      </form>
+    </div>
+
+    <!------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------->
+    <div id="ganaste" class="invisible">
+      
+      <h2 id="mensaje_ganado"> Has ganado!!</h2>
+      <p><img class="shadow" width="200" height="200" src="http://1.bp.blogspot.com/_BDCyGwP3nOA/TSIrUze1PaI/AAAAAAAAIWw/gtg5o6TuxAw/s1600/cara_feliz.png"></img>
+      </p>
+      <p>
+      <button class="regresar_al_menu">
+        Menú principal
+      </button>
+      </p>
+      
+    </div>
+    
+    <!------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------->
+    <div id="perdiste" class="invisible">
+      
+      <h2 id="mensaje_perdido"> Has perdido!!</h2>
+      <p><img class="shadow" width="200" height="242" src="http://blog.ale7714designs.com/images/2013/02/sad-face.png"></img>
+      <p><button class="regresar_al_menu">
+        Menú principal
+      </button>
+      </p> 
+      
+    </div>
+    
+    <!------------------------------------------------------------------------->
+    <!------------------------------------------------------------------------->
+
+    
